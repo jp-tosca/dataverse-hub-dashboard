@@ -26,7 +26,7 @@ function Test() {
 	useEffect(() => {
 		async function fetchData() {
 			try {
-				const response = await fetch("./src/assets/demo/status.json");
+				const response = await fetch("./assets/demo/status.json");
 				const data = await response.json();
 				//const data = await DvMetricsService.geInstallationsStatus();
 				setInstallationStatus(data);
