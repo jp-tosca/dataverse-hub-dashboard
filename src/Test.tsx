@@ -67,7 +67,7 @@ function Test() {
 					attribution='Dataverse-Hub'
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 				/>
-				{filteredData.map((status) => (
+				{/* {filteredData.map((status) => (
 					<Marker
 						key={status.installation.dvHubId}
 						position={[
@@ -117,7 +117,7 @@ function Test() {
 							</div>
 						</Popup>
 					</Marker>
-				))}
+				))} */}
 			</MapContainer>
 
 		
