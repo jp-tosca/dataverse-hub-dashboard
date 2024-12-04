@@ -26,7 +26,9 @@ function Test() {
 	useEffect(() => {
 		async function fetchData() {
 			try {
-				const data = await DvMetricsService.geInstallationsStatus();
+				const response = await fetch("https://raw.githubusercontent.com/jp-tosca/dataverse-hub-dashboard/refs/heads/main/src/demo/status.json");
+				const data = await response.json();
+				//const data = await DvMetricsService.geInstallationsStatus();
 				setInstallationStatus(data);
 				setfilteredData(data);
 			} catch (error) {
