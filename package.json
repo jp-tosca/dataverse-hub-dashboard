@@ -2,7 +2,7 @@
   "name": "dataverse-hub-dashboard",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://jp-tosca.github.io/dataverse-hub-dashboard",
+  "homepage": "https://jp-tosca.github.io/dataverse-hub-dashboard/",
   "type": "module",
   "scripts": {
     "dev": "vite",
