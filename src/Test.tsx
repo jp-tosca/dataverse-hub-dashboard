@@ -125,7 +125,7 @@ function Test() {
 			<div className="ag-theme-quartz" // applying the Data Grid theme
 				style={{ height: 500 }} // the Data Grid will fill the size of the parent container
 				>
-				<AgGridReact
+				{/* <AgGridReact
 					rowData={installationStatus}
 					columnDefs={[
 						{ headerName: "Name", field: "installation.name", filter: true },
@@ -143,7 +143,7 @@ function Test() {
 					domLayout="autoHeight"
 					animateRows={false}
 					onFilterChanged={onFilterChanged}
-				/>
+				/> */}
 			</div>
 		</>
 	);
