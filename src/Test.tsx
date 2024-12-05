@@ -100,7 +100,7 @@ function Test() {
 								<br />
 								<strong>Description:</strong> {status.installation.description}
 								<br />
-								<strong>Hostname:</strong> {status.installation.hostname}
+								<strong>Hostname:</strong> <a href={`http://${status.installation.hostname}`} target="_blank" rel="noopener noreferrer">{status.installation.hostname}</a>
 								<br />
 								<strong>Country:</strong> {status.installation.country}
 								<br />
@@ -131,14 +131,11 @@ function Test() {
 					rowData={installationStatus}
 					columnDefs={[
 						{ headerName: "Name", field: "installation.name", filter: true },
-						{ headerName: "Description", field: "installation.description", filter: true },
 						{ headerName: "Hostname", field: "installation.hostname", filter: true },
 						{ headerName: "Country", field: "installation.country", filter: true },
 						{ headerName: "Continent", field: "installation.continent", filter: true },
 						{ headerName: "Launch Year", field: "installation.launchYear", filter: true },
 						{ headerName: "GDCC Member", field: "installation.gdccMember", filter: true },
-						{ headerName: "DOI Authority", field: "installation.doiAuthority", filter: true },
-						{ headerName: "Contact Email", field: "installation.contactEmail", filter: true },
 						{ headerName: "Status", field: "status", filter: true },
 					]}
 					defaultColDef={{ flex: 1 }}
