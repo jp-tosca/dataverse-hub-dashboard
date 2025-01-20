@@ -5,28 +5,23 @@ import { DvMetricsService } from "./openapi/services/DvMetricsService";
 import type { InstallationVersionInfo } from "./openapi";
 import { AgGridReact } from "ag-grid-react";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import "leaflet/dist/leaflet.css";
+
 import "ag-grid-community/styles/ag-grid.css"; // Mandatory CSS required by the Data Grid
 import "ag-grid-community/styles/ag-theme-quartz.css"; // Optional Theme applied to the Data Grid
 
 
-
-				
-
-function Test() {
-
-
-	const [installationStatus, setInstallationStatus] = useState<
-		InstallationVersionInfo[]
-	>([]);
-
-	const [filteredData, setfilteredData] = useState<InstallationVersionInfo[]>([]);
+function InstallationMap() {
+	const [installationStatus, setInstallationStatus] = useState<InstallationVersionInfo[]>([]);
+    const [filteredData, setfilteredData] = useState<InstallationVersionInfo[]>([]);
 
 	useEffect(() => {
 		async function fetchData() {
 			try {
 				const response = await fetch("./status.json");
+				//const response = await fetch("https://hub.dataverse.org/api/installations/status");
+				//const response = await fetch("http://localhost:8080/api/installation/status");
 				const data = await response.json();
 				//const data = await DvMetricsService.geInstallationsStatus();
 				setInstallationStatus(data);
@@ -38,8 +33,6 @@ function Test() {
 
 		fetchData();
 	}, []);
-
-
 
 	interface GridRef {
 		api: {
@@ -148,4 +141,4 @@ function Test() {
 	);
 }
 
-export default Test;
+export default InstallationMap;
