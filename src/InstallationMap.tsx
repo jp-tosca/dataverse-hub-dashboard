@@ -19,8 +19,8 @@ function InstallationMap() {
 	useEffect(() => {
 		async function fetchData() {
 			try {
-				const response = await fetch("./status.json");
-				//const response = await fetch("https://hub.dataverse.org/api/installations/status");
+				//const response = await fetch("./status.json");
+				const response = await fetch("https://hub.dataverse.org/api/installation/status");
 				//const response = await fetch("http://localhost:8080/api/installation/status");
 				const data = await response.json();
 				//const data = await DvMetricsService.geInstallationsStatus();
