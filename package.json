@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ag-charts-react": "^11.0.4",
     "ag-grid-react": "^32.3.3",
     "bootstrap": "^5.3.3",
     "eslint-plugin-tailwindcss": "^3.17.5",
