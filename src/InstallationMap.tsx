@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import { DvMetricsService } from "./openapi/services/DvMetricsService";
 import type { InstallationVersionInfo } from "./openapi";
 import { AgGridReact } from "ag-grid-react";
+import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
+import { ModuleRegistry } from '@ag-grid-community/core';
+
 
 
 import "leaflet/dist/leaflet.css";
@@ -13,6 +16,9 @@ import "ag-grid-community/styles/ag-theme-quartz.css"; // Optional Theme applied
 
 
 function InstallationMap() {
+
+	ModuleRegistry.registerModules([ClientSideRowModelModule]);
+
 	const [installationStatus, setInstallationStatus] = useState<InstallationVersionInfo[]>([]);
     const [filteredData, setfilteredData] = useState<InstallationVersionInfo[]>([]);
 
