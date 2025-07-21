@@ -13,7 +13,7 @@
   "dependencies": {
     "@ag-grid-community/client-side-row-model": "^32.3.5",
     "ag-charts-react": "^11.2.4",
-    "ag-grid-react": "^33.2.4",
+    "ag-grid-react": "^33.3.2",
     "bootstrap": "^5.3.6",
     "eslint-plugin-tailwindcss": "^3.18.0",
     "leaflet": "^1.9.4",
